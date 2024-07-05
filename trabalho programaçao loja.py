@@ -22,6 +22,7 @@ while True:
         quantidade = int(input("Quantidade em estoque: "))
         preco = float(input("Preço do produto: "))
         produtos[codigo] = {"nome": nome, "quantidade": quantidade, "preco": preco} #para incluir valores dentro de dicionários, é necessário escrever o nome do dicionário, a chave que ele terá e a lista a qual será atribuído
+    # o comando .append() fucniona paenas para listas e não se aplica aos dicionários
     
     # Alterar Produto
     elif opcao == "2":
@@ -30,7 +31,7 @@ while True:
             nome = input("Novo nome do produto: ")
             quantidade = int(input("Nova quantidade em estoque: "))
             preco = float(input("Novo preço do produto: "))
-            produtos[codigo] = {"nome": nome, "quantidade": quantidade, "preco": preco}
+            produtos[codigo] = {"nome": nome, "quantidade": quantidade, "preco": preco} #Os valores antigos seão substituídos pelos novos adicionados na mesma variável
         else:
             print("Produto não encontrado.")
     
